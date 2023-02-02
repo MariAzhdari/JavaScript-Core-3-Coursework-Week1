@@ -32,7 +32,7 @@ function submit() {
     title.value === null ||
     title.value === "" ||
     pages.value === null ||
-    pages.value === ""
+    pages.value === "" ||
     author.value ==="" ||
     author.value ===null
   ) {
@@ -79,9 +79,9 @@ function render() {
     cell4.appendChild(changeBut);
     let readStatus = "";
     if (myLibrary[i].check == false) {
-      readStatus = "Yes";
-    } else {
       readStatus = "No";
+    } else {
+      readStatus = "Yes";
     }
     changeBut.innerHTML = readStatus;
 
@@ -91,7 +91,7 @@ function render() {
     });
 
     //add delete button to every row and render again
-    let delButton = document.createElement("button");
+    let delBut = document.createElement("button");
     delBut.id = i + 5;
     cell5.appendChild(delBut);
     delBut.className = "btn btn-warning";
